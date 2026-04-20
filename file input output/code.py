@@ -151,24 +151,45 @@ with open("Sample_2.txt","w") as file:
 #     info = json.load(student_data)
 #     print(info, type(info))
 import json
-data = [ {"name":"Ilyas",
-        "age": 19,
-        "Marks": [85,95,95,93,90],
-        "Subjects": ["Math","OOP","AI","DataBase","Software Engineering"]},
-         {"name":"Bashir Ahmad",
-        "age": 21,
-        "Marks": [85,95,86,95,93],
-        "Subjects": ["Math","OOP","AI","DataBase","Software Engineering"]},
-         {"name":"Abbas Ahmad",
-        "age": 12,
-        "Marks": [85,93,96,92,94],
-        "Subjects": ["Math","OOP","AI","DataBase","Software Engineering"]}
-        ]
+# data = [ {"name":"Ilyas",
+#         "age": 19,
+#         "Marks": [85,95,95,93,90],
+#         "Subjects": ["Math","OOP","AI","DataBase","Software Engineering"]},
+#          {"name":"Bashir Ahmad",
+#         "age": 21,
+#         "Marks": [85,95,86,95,93],
+#         "Subjects": ["Math","OOP","AI","DataBase","Software Engineering"]},
+#          {"name":"Abbas Ahmad",
+#         "age": 12,
+#         "Marks": [85,93,96,92,94],
+#         "Subjects": ["Math","OOP","AI","DataBase","Software Engineering"]}
+#         ]
 
-with open("Student_data.json","w") as file:
-    json.dump(data, file,indent=4)
+# with open("Student_data.json","w") as file:
+#     json.dump(data, file,indent=4)
 
-with open("Student_data.json","r") as file:
+# with open("Student_data.json","r") as file:
+#     data = json.load(file)
+#     print(data)
+#     print(type(data))
+
+class Person:
+    def __init__(self, fname, lname, age, gender):
+        self.fname = fname
+        self.lname = lname
+        self.age = age
+        self.gender = gender
+    
+
+person = Person("Waqas","Ahmad",21,"Male")
+
+def show(person):
+    if isinstance(person,Person):
+        return {"name" : person.fname + " " + person.lname,"age": person.age,"Gender": person.gender}
+with open("My_detail.json", "w") as my_data:
+    json.dump(person,my_data, default=show, indent= 4)
+
+with open("My_detail.json","r") as file:
     data = json.load(file)
     print(data)
-    print(type(data))
+    
