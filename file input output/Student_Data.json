@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Ilyas",
+        "age": 19,
+        "Marks": [
+            85,
+            95,
+            95,
+            93,
+            90
+        ],
+        "Subjects": [
+            "Math",
+            "OOP",
+            "AI",
+            "DataBase",
+            "Software Engineering"
+        ]
+    },
+    {
+        "name": "Bashir Ahmad",
+        "age": 21,
+        "Marks": [
+            85,
+            95,
+            86,
+            95,
+            93
+        ],
+        "Subjects": [
+            "Math",
+            "OOP",
+            "AI",
+            "DataBase",
+            "Software Engineering"
+        ]
+    },
+    {
+        "name": "Abbas Ahmad",
+        "age": 12,
+        "Marks": [
+            85,
+            93,
+            96,
+            92,
+            94
+        ],
+        "Subjects": [
+            "Math",
+            "OOP",
+            "AI",
+            "DataBase",
+            "Software Engineering"
+        ]
+    }
+]
